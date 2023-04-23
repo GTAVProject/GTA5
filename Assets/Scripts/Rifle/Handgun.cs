@@ -11,7 +11,7 @@ public class Handgun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetbuttonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -21,7 +21,7 @@ public class Handgun : MonoBehaviour
     {
         RaycastHit hitInfo;
 
-        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hitInfo, shoottingRange))
+        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hitInfo, shootingRange))
         {
             Debug.Log(hitInfo.transform.name);
         }
